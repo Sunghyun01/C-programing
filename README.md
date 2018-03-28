@@ -1,1 +1,1 @@
-# C-programing
+# C++ programing project
