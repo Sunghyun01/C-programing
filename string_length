@@ -1,0 +1,15 @@
+#include<stdio.h>
+int strlen(char string[]){
+	int length;
+	int num;
+	for(num=0;string[num]!='\0';num++){}
+	printf("%d",num);
+	length=num;
+	return length;
+}
+int main(){
+	char string[1024];
+	scanf("%s",string);
+	printf("%s의 문자열의 길이는 : %d 입니다\n", string, strlen(string));
+	return 0;
+}
