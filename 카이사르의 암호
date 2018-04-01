@@ -1,0 +1,33 @@
+#include "stdafx.h"
+
+int main()
+{
+		char str[100] , stg;
+		int push = 3;
+
+		printf("바꿀 문자 ㄱㄱ\n");
+		scanf_s("%s", str,sizeof(str));
+		for (int i = 0; str[i] != '\0'; i++) {
+			stg = str[i];
+
+			if (stg >= 'a' && stg <= 'z') {
+				str[i] = ((str[i] - 'a') + push) % 26 + 'a';
+
+			}
+
+		}
+		printf("암호화: %s\n", str);
+
+		for (int i = 0; str[i] != '\0'; i++) {
+			stg = str[i];
+
+			if (stg >= 'a' && stg <= 'z') {
+				/*str[i] = 'z'- (('z' - str[i] + push) % 26);*/
+				str[i] = ((str[i] + 26 - 'a') - push) % 26 + 'a';
+				
+			}
+
+		}
+		printf("복호화: %s\n", str);
+		return 0;
+	}
