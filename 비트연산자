@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main() {
+   /*
+      입력받은 수의 제곱(승) 구하기
+      0001 = 1     밑에 선언되는 변수
+      0010 = 2     i = 00001111
+      0100 = 4     j = 00010100
+      1000 = 8 
+   */
+   int max = 3;
+   int input,tab;
+   printf("제곱할 수를 올려주세요");
+   scanf("%d", input);
+   printf("몇승을 구할거죠?");
+   scanf("%d", tab);
+   for (int i = 0; i < tab; i++) {
+      printf(" %d의 1승 %d\n",input, input<<i);
+   }
+   //다른 비트 연산자
+   int i=15, j=20;
+   //2개의 비트가 참이여야함 00000100
+   printf("%d AND %d", i, j, i&j);
+   //2개의 비트중 하나만 1이여도 됨 00011111
+   printf("%d or %d", i, j, i|j);
+   //2개의 비트가 서로 달라야함 00011011
+   printf("%d AND %d", i, j, i^j);
+   return 0;
+}
