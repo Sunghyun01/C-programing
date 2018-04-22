@@ -1,0 +1,24 @@
+
+#include "stdafx.h"
+
+int strcmp(char *s1, char *s2) {
+	while (*s1 == *s2 && *s1 != '\0' && *s2 != '\0') {
+		s1++;
+		s2++;
+	}
+	if (*s1 == *s2) {
+		printf("ok");
+		return 1;
+	}
+	else {
+		printf("no");
+		return -1;
+	}
+
+}
+int main() {
+	char *s1 = "apple";
+	char *s2= "soso";
+	strcmp(s1, s2);
+}
+
